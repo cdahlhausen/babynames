@@ -31,7 +31,7 @@ def print_results(results, n=10):
         print "{:<8} {:<15} {:<10}".format( iterator, v['Name'], v['Births'])
 
 def find_names(year, n, sex=None):
-    with open('yob' + str(year) + '.txt', 'rb') as f:        
+    with open('data/' + 'yob' + str(year) + '.txt', 'rb') as f:        
         reader =  csv.DictReader(f, fieldnames = ['Name', 'Gender', 'Births'])
         results = []
         males = []
